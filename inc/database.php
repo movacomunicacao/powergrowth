@@ -8,14 +8,14 @@
 			$servername	= 'localhost';
 			$dbname		= 'powergrowth';
 			$username	= 'root';
-			$password	= 'root';
-			$port = 8889;
+			$password	= '';
+			$port = 80;
 		} else {
 			$servername	= 'localhost';
 			$dbname		= 'powergrowth';
 			$username	= 'root';
-			$password	= 'root';
-			$port = 8889;
+			$password	= '';
+			$port = 80;
 		}
 
 		try{
