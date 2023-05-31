@@ -8,17 +8,19 @@
     margin-top: 20px;
 }
 
-.cadastro input{
-    width: 50%;
-}
 
-.consulta input{
+#pesquisar {
     width: 40%;
 }
 
 .consulta .btn {
     padding: 4px 30px;
 }
+
+.pesquisa h1 {
+    padding: 4px 30px;
+}
+
 
 @media screen and (max-width: 600px) {
     .cadastro input{

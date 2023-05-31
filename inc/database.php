@@ -9,13 +9,13 @@
 			$dbname		= 'powergrowth';
 			$username	= 'root';
 			$password	= '';
-			$port = 80;
+			$port = 3306;
 		} else {
 			$servername	= 'localhost';
 			$dbname		= 'powergrowth';
 			$username	= 'root';
 			$password	= '';
-			$port = 80;
+			$port = 3306;
 		}
 
 		try{

@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<?php 
+include('inc/database.php');
+//include('consulta.php');
 
-<head>
-    <?php include('inc/head.php'); ?>
-</head>
+$buscando = array_key_exists('buscando', $_POST) ? $_POST['buscando'] : '';
+$pesquisar = array_key_exists('pesquisar', $_POST) ? $_POST['pesquisar'] : '';
+$conn	= db();
+
+var_dump( $buscando, ($buscando != '') );
+
+include('inc/head.php'); 
+?>
+
 
 <body class="bg-light consulta cadastro">
 
@@ -14,14 +21,41 @@
 
         <H1>Análises</H1>
 
-        <label for="" class="me-1">Porcurar: </label>
-        <input type="text" name="nome" id="nome" value=" Digite o nome do produtor..." class="me-2" ><a class="btn btn-primary" >Enviar</a><br>
+        <?PHP $linkRelatorio = ($buscando == '') ? 'consulta.php' : 'pesquisa.php'; ?>
 
+        <form method="POST" action="<?= $linkRelatorio ?>">
+
+        <?PHP if ($buscando == '') { ?>
+
+          <label for="" class="me-1">Porcurar: </label>
+          <input type="text" name="pesquisar" id="pesquisar" placeholder=" Digite o nome do produtor..." class="me-2" >
+
+        <?PHP } else { ?>
+
+          <select name="producer_id" id="">
+          <?PHP
+          foreach($conn->query(" SELECT * FROM producer WHERE title LIKE '%$pesquisar%'") as $row) {
+              $title = $row['title'];
+              $id_producer = $row['id'];
+
+              echo (' <option value="'.$id_producer.'">'.$title.'</option>');
+
+
+          }
+          ?>
+          </select>
+        <?PHP } ?>
+
+        <input type="hidden" name="buscando" value="1" />
+
+        <input type="submit" class="btn btn-primary " value="enviar">
+        </form>
 
         </div>
       </div>
     </div>
 
+    
     
 </body>
 

@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
     <?php include('inc/head.php'); ?>
-</head>
+
 
 
   <body class="bg-light">

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <?php include('inc/head.php'); ?>
-</head>
-
+<?php include('inc/head.php'); ?>
 
   <body class="bg-light">
 
