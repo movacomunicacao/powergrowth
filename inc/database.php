@@ -13,8 +13,8 @@
 		} else {
 			$servername	= 'localhost';
 			$dbname		= 'powergrowth';
-			$username	= 'root';
-			$password	= '';
+			$username	= 'powergrowth';
+			$password	= 'mP+AM{jfLSfN';
 			$port = 3306;
 		}
 

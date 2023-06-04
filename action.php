@@ -265,10 +265,13 @@ $fetch_nutrition_feed_kglt2 <br>
         ]);
 
         // Set chart options
-        var options = {'title':'Producer',
+        var options = {'title':'Produtor',
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
-                       'height':300};
+                       'height':300,
+                       'min': 0,
+                        'max': 1000
+                      };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.BarChart(document.getElementById('producer_chart'));
@@ -289,7 +292,10 @@ $fetch_nutrition_feed_kglt2 <br>
         var options = {'title':'Agrifirm',
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
-                       'height':300};
+                       'height':300,
+                       'min': 0,
+                       'max': 1000
+                      };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.BarChart(document.getElementById('agrifirm_chart'));

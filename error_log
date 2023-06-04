@@ -1,0 +1,48 @@
+[04-Jun-2023 00:51:45 UTC] PHP Fatal error:  Uncaught Error: Class 'ZipArchive' not found in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php:63
+Stack trace:
+#0 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php(158): PhpOffice\PhpSpreadsheet\Shared\File::fileExists('zip://base.xlsx...')
+#1 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php(412): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('base.xlsx', '_rels/.rels')
+#2 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('base.xlsx')
+#3 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/action.php(54): PhpOffice\PhpSpreadsheet\Reader\BaseReader in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php on line 63
+[04-Jun-2023 00:52:12 UTC] PHP Fatal error:  Uncaught Error: Class 'ZipArchive' not found in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php:63
+Stack trace:
+#0 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php(158): PhpOffice\PhpSpreadsheet\Shared\File::fileExists('zip://base.xlsx...')
+#1 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php(412): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('base.xlsx', '_rels/.rels')
+#2 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('base.xlsx')
+#3 /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/action.php(54): PhpOffice\PhpSpreadsheet\Reader\BaseReader in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowthdois/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php on line 63
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
+[04-Jun-2023 00:59:56 UTC] PHP Notice:  Undefined index: title in /home/lmevu5xhr72b/public_html/resources/clientes/agrifirm/powergrowth/pesquisa.php on line 21
