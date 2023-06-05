@@ -23,7 +23,7 @@
 
       <div class="row justify-content-center py-3 text-center">
         <div class="col-10 col-lg-4 my-4">
-          <img src="img/agrifirm_logo.png" class="col-9" alt="">
+          <img src="img/agrifirm_logo.png" class="col-7" alt="">
         </div>
       </div>
 

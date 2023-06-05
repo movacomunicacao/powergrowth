@@ -160,3 +160,17 @@ tr:last-of-type td:last-of-type {
 .border-white{
   border-color: #fff !important;
 }
+
+#relatorio table, #relatorio table tr, #relatorio table td{
+  border: none;
+  border-color:#fff;
+}
+
+#relatorio table tr{
+  border-bottom: 1px solid #ccc;
+}
+
+#relatorio a{
+  color:#666;
+  text-decoration: none;
+}
