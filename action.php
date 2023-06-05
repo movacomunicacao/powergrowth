@@ -1,5 +1,65 @@
 <?php
 
+include('inc/database.php');
+$conn	= db();
+
+if(isset($_GET['id_relatorio'])){
+
+  $id_relatorio = $_GET['id_relatorio'];
+ 
+  foreach($conn->query(" SELECT * FROM data WHERE id = $id_relatorio") as $row) {
+
+    //$producer_title                 = $row['title'];
+
+    $id_producer                    = $row['id_producer'];
+
+    $race                           = $row['race'];
+    $weight_birth                   = $row['weight_birth'];
+    $weight_calfs                   = $row['weight_calfs'];
+
+    $number_calfs                   = $row['number_calfs'];
+    $age_calfs                      = $row['age_calfs'];
+    $weight_wean                    = $row['weight_wean'];
+    $wean_days                      = $row['wean_days'];
+    $number_births                  = $row['number_births'];
+
+    $producer_column1               = $row['producer_column1'];
+    $producer_milk_kglt             = $row['producer_milk_kglt'];
+    $producer_sucedaneo_kglt        = $row['producer_sucedaneo_kglt'];
+    $producer_sucedaneo_kglt2       = $row['producer_sucedaneo_kglt2'];
+    $producer_enrichment_kglt2      = $row['producer_enrichment_kglt2'];
+    $producer_feed_column1          = $row['producer_feed_column1'];
+    $producer_feed_kglt2            = $row['producer_feed_kglt2'];
+
+    $nutrition_milk_diet            = $row['nutrition_milk_diet'];
+    $nutrition_milk_kglt            = $row['nutrition_milk_kglt'];
+    $nutrition_kalvolac_diet        = $row['nutrition_kalvolac_diet'];
+    $nutrition_kalvolac_kglt        = $row['nutrition_kalvolac_kglt'];
+    $nutrition_kalvolac_dilution    = $row['nutrition_kalvolac_dilution'];
+    $nutrition_enrichment_kglt      = $row['nutrition_enrichment_kglt'];
+    $nutrition_enrichment_kglt2     = $row['nutrition_enrichment_kglt2'];
+    $nutrition_feed_kglt2           = $row['nutrition_feed_kglt2'];
+
+    $nutrition_milk_diet            = $row['nutrition_milk_diet'];
+    $nutrition_milk_kglt            = $row['nutrition_milk_kglt'];
+    $nutrition_kalvolac_diet        = $row['nutrition_kalvolac_diet'];
+    $nutrition_kalvolac_kglt        = $row['nutrition_kalvolac_kglt'];
+    $nutrition_kalvolac_dilution    = $row['nutrition_kalvolac_dilution'];
+
+    $protein                        = $row['protein'];
+    $fat                            = $row['fat'];
+    $lactose                        = $row['lactose'];
+    $fiber                          = $row['fiber'];
+    $mineral                        = $row['mineral'];
+
+    $date = date('Y/m/d h:i:s', time());
+
+
+  }
+
+
+}else{
+
 $id_producer                    = $_POST['producer'];
 
 $race                           = $_POST['race'];
@@ -42,6 +102,10 @@ $fiber                          = $_POST['fiber'];
 $mineral                        = $_POST['mineral'];
 
 $date = date('Y/m/d h:i:s', time());
+  
+}
+
+
 
 // EXCEL TREATMENT
 // Docs https://phpspreadsheet.readthedocs.io/en/latest/topics/accessing-cells/#looping-through-cells
@@ -107,8 +171,8 @@ $nutrition_solids = $spreadsheet2->getActiveSheet()->getCell('H23')->getCalculat
 
 
 //UPDATE DATA TABLE
-include('inc/database.php');
-$conn	= db();
+//include('inc/database.php');
+//$conn	= db();
 $query	= $conn->prepare("INSERT INTO data (id_producer, race, number_calfs, weight_birth, weight_calfs, age_calfs, weight_wean, wean_days, number_births, producer_column1, producer_milk_kglt, producer_sucedaneo_kglt, producer_sucedaneo_kglt2, producer_enrichment_kglt2, producer_feed_column1, producer_feed_kglt2, nutrition_milk_diet, nutrition_milk_kglt, nutrition_kalvolac_diet, nutrition_kalvolac_kglt, nutrition_kalvolac_dilution, nutrition_enrichment_kglt, nutrition_enrichment_kglt2, nutrition_feed_kglt2, protein, fat, lactose, fiber,  mineral, kcalkg, producer_solids, nutrition_solids, filename, date) VALUES ('$id_producer', '$race', '$number_calfs', '$weight_birth', '$weight_calfs', '$age_calfs', '$weight_wean', '$wean_days', '$number_births', '$producer_column1', '$producer_milk_kglt', '$producer_sucedaneo_kglt', '$producer_sucedaneo_kglt2', '$producer_enrichment_kglt2', '$producer_feed_column1', '$producer_feed_kglt2', '$nutrition_milk_diet', '$nutrition_milk_kglt', '$nutrition_kalvolac_diet', '$nutrition_kalvolac_kglt', '$nutrition_kalvolac_dilution', '$nutrition_enrichment_kglt', '$nutrition_enrichment_kglt2', '$nutrition_feed_kglt2', '$protein', '$fat', '$lactose', '$fiber',  '$mineral', '$kcalkg', '$producer_solids', '$nutrition_solids', '$filename', '$date') ");
 $query->execute();
 
@@ -269,7 +333,6 @@ $fetch_nutrition_feed_kglt2 <br>
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
                        'height':300,
-                       'min': 0,
                         'max': 1000
                       };
 
@@ -293,7 +356,6 @@ $fetch_nutrition_feed_kglt2 <br>
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
                        'height':300,
-                       'min': 0,
                        'max': 1000
                       };
 
@@ -310,9 +372,9 @@ $fetch_nutrition_feed_kglt2 <br>
   <div class="container-fluid">
 
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-12">
         <p>
-          <h2><?=$producer_title?></h2>
+          <h2 class="mt-3"><?=$producer_title?></h2>
           <strong>Fazenda:</strong> <?=$producer_farm?><br>
           <strong>Cidade:</strong> <?=$producer_city?>/<?=$producer_state?><br>
           <strong>Telefone:</strong> <?=$producer_phone?><br>
