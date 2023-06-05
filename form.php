@@ -1,18 +1,19 @@
 <?php include('inc/head.php'); ?>
 
-  <body class="bg-light">
+  <body>
 
     <div class="container-fluid">
-      <div class="row justify-content-center py-5 text-center">
+      <div class="row justify-content-center py-3 text-center">
 
         <div class="col-12 col-lg-6 bg-white p-5 rounded">
 
-          <h1 class="mb-5">Power Growth</h1>
+
+          <img src="img/agrifirm_logo.png" class="col-6 mb-5" alt="">
 
 
           <form class="text-start" action="action.php" method="post" enctype="multipart/form-data">
-            <h2>Inicial</h2><br>
-            
+            <h2>:: Cadastro de Dados</h2><br>
+
             <p>
               <label class="text-start">Produtor:</label><br>
               <select class="producer col-12 p-2" name="producer">
@@ -113,7 +114,7 @@
             </p>
 
             <hr>
-            <h2>Producer</h2><br>
+            <h2>:: Nutrição Produtor</h2><br>
 
             <p>
               <label class="text-start">Coluna 1</label><br>
@@ -206,7 +207,7 @@
             </p>
 
             <hr>
-            <h2>Nutrição Agrifirm</h2><br>
+            <h2>:: Nutrição Agrifirm</h2><br>
 
             <p>
               <label class="text-start">Leite</label><br>
@@ -307,7 +308,7 @@
 
 
             <hr>
-            <h2>Sucedâneo</h2><br>
+            <h2>:: Sucedâneo</h2><br>
 
             <p>
               <label class="text-start">Proteína</label><br>
@@ -335,7 +336,7 @@
             </p>
 
 
-            <input type="submit" name="" value="Gerar" class="mt-3 btn btn-primary">
+            <input type="submit" name="" value="Gerar" class="mt-3 btn btn-primary btn-verde">
           </form>
 
         </div>

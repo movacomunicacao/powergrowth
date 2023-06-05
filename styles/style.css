@@ -1,11 +1,10 @@
 .cadastro h1{
     margin-top: 30px;
-
 }
 
 .cadastro label{
-
     margin-top: 20px;
+    color: #007f2d;
 }
 
 
@@ -13,21 +12,37 @@
     width: 40%;
 }
 
+label{
+  color: #007f2d;
+}
+
+h2{
+  color: #007f2d;
+}
+
 .consulta .btn {
     padding: 4px 30px;
+    color: #007f2d;
 }
 
 .pesquisa h1 {
     padding: 4px 30px;
+    color: #007f2d;
+}
+
+select, input {
+    border-radius: 12px;
+    border-color: #ccc;
+    border-width: 1px;
 }
 
 
 @media screen and (max-width: 800px) {
-     
+
     select, input {
         width: 100% !important;
     }
-    
+
     table {
         width: 100% !important;
     }
@@ -35,5 +50,113 @@
     .cadastro h1 {
         margin-top: 50px;
         font-size: 42px;
-        margin-bottom: 20px;}
+        margin-bottom: 20px;
+        color: #007f2d;
+      }
+}
+
+.bg-verde{
+  background-color: #007f2d;
+}
+
+.bg-amarelo{
+  background-color: #ffcc00 !important;
+}
+
+.bg-white{
+  background-color: #fff !important;
+}
+
+.texto-preto{
+  color: #000 !important;
+}
+
+.texto-verde{
+  color: #007f2d !important;
+}
+
+.btn-verde{
+  background-color: #007f2d !important;
+  color: #ffcc00 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+
+.btn-amarelo{
+  background-color: #ffcc00 !important;
+  color: #007f2d !important;
+  border: none !important;
+  border-radius: 20px !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+}
+
+.btn-branco{
+  background-color: #fff !important;
+  color: #666 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  font-size: 20px !important;
+}
+
+.home-round{
+  background-color: #007f2d;
+  height: 80px;
+  border-radius: 0 0 50% 50%;
+  margin-top:-2px !important;
+}
+
+.tabela{
+  background-color: #fff;
+  border-radius: 20px;
+  border:none;
+}
+
+.table-result{
+  background-color: #007f2d !important;
+  color: #ffcc00 !important;
+}
+
+th:first-of-type {
+  border-top-left-radius: 10px;
+}
+th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+.border-none {
+  border-collapse: collapse;
+  border: none;
+}
+
+.border-none td {
+  border: 1px solid #ccc;
+}
+
+.border-none tr:first-child td {
+  border-top: none;
+}
+
+.border-none tr:last-child td {
+  border-bottom: none;
+}
+
+.border-none tr td:first-child {
+  border-left: none;
+}
+
+.border-none tr td:last-child {
+  border-right: none;
+}
+
+.border-white{
+  border-color: #fff !important;
 }

@@ -6,7 +6,7 @@ $conn	= db();
 if(isset($_GET['id_relatorio'])){
 
   $id_relatorio = $_GET['id_relatorio'];
- 
+
   foreach($conn->query(" SELECT * FROM data WHERE id = $id_relatorio") as $row) {
 
     //$producer_title                 = $row['title'];
@@ -102,7 +102,7 @@ $fiber                          = $_POST['fiber'];
 $mineral                        = $_POST['mineral'];
 
 $date = date('Y/m/d h:i:s', time());
-  
+
 }
 
 
@@ -173,10 +173,14 @@ $nutrition_solids = $spreadsheet2->getActiveSheet()->getCell('H23')->getCalculat
 //UPDATE DATA TABLE
 //include('inc/database.php');
 //$conn	= db();
-$query	= $conn->prepare("INSERT INTO data (id_producer, race, number_calfs, weight_birth, weight_calfs, age_calfs, weight_wean, wean_days, number_births, producer_column1, producer_milk_kglt, producer_sucedaneo_kglt, producer_sucedaneo_kglt2, producer_enrichment_kglt2, producer_feed_column1, producer_feed_kglt2, nutrition_milk_diet, nutrition_milk_kglt, nutrition_kalvolac_diet, nutrition_kalvolac_kglt, nutrition_kalvolac_dilution, nutrition_enrichment_kglt, nutrition_enrichment_kglt2, nutrition_feed_kglt2, protein, fat, lactose, fiber,  mineral, kcalkg, producer_solids, nutrition_solids, filename, date) VALUES ('$id_producer', '$race', '$number_calfs', '$weight_birth', '$weight_calfs', '$age_calfs', '$weight_wean', '$wean_days', '$number_births', '$producer_column1', '$producer_milk_kglt', '$producer_sucedaneo_kglt', '$producer_sucedaneo_kglt2', '$producer_enrichment_kglt2', '$producer_feed_column1', '$producer_feed_kglt2', '$nutrition_milk_diet', '$nutrition_milk_kglt', '$nutrition_kalvolac_diet', '$nutrition_kalvolac_kglt', '$nutrition_kalvolac_dilution', '$nutrition_enrichment_kglt', '$nutrition_enrichment_kglt2', '$nutrition_feed_kglt2', '$protein', '$fat', '$lactose', '$fiber',  '$mineral', '$kcalkg', '$producer_solids', '$nutrition_solids', '$filename', '$date') ");
-$query->execute();
 
-sleep(1);
+if(!isset($_GET['id_relatorio'])){
+  $query	= $conn->prepare("INSERT INTO data (id_producer, race, number_calfs, weight_birth, weight_calfs, age_calfs, weight_wean, wean_days, number_births, producer_column1, producer_milk_kglt, producer_sucedaneo_kglt, producer_sucedaneo_kglt2, producer_enrichment_kglt2, producer_feed_column1, producer_feed_kglt2, nutrition_milk_diet, nutrition_milk_kglt, nutrition_kalvolac_diet, nutrition_kalvolac_kglt, nutrition_kalvolac_dilution, nutrition_enrichment_kglt, nutrition_enrichment_kglt2, nutrition_feed_kglt2, protein, fat, lactose, fiber,  mineral, kcalkg, producer_solids, nutrition_solids, filename, date) VALUES ('$id_producer', '$race', '$number_calfs', '$weight_birth', '$weight_calfs', '$age_calfs', '$weight_wean', '$wean_days', '$number_births', '$producer_column1', '$producer_milk_kglt', '$producer_sucedaneo_kglt', '$producer_sucedaneo_kglt2', '$producer_enrichment_kglt2', '$producer_feed_column1', '$producer_feed_kglt2', '$nutrition_milk_diet', '$nutrition_milk_kglt', '$nutrition_kalvolac_diet', '$nutrition_kalvolac_kglt', '$nutrition_kalvolac_dilution', '$nutrition_enrichment_kglt', '$nutrition_enrichment_kglt2', '$nutrition_feed_kglt2', '$protein', '$fat', '$lactose', '$fiber',  '$mineral', '$kcalkg', '$producer_solids', '$nutrition_solids', '$filename', '$date') ");
+  $query->execute();
+
+  sleep(1);
+}
+
 
 $sql = "SELECT MAX(id) FROM data";
 $query	= $conn->prepare($sql);
@@ -324,8 +328,8 @@ $fetch_nutrition_feed_kglt2 <br>
         var data = google.visualization.arrayToDataTable([
            ['Element', 'GPD', { role: 'style' }],
            ['EM', <?=$producer_em?>, 'silver'],            // RGB value
-           ['PM', <?=$producer_pm?>, 'yellow'],
-           ['goal', <?=$producer_goal?>, 'green' ], // CSS-style declaration
+           ['PM', <?=$producer_pm?>, 'ffcc00'],
+           ['Goal', <?=$producer_goal?>, 'green' ], // CSS-style declaration
         ]);
 
         // Set chart options
@@ -333,7 +337,15 @@ $fetch_nutrition_feed_kglt2 <br>
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
                        'height':300,
-                        'max': 1000
+                        'max': 1000,
+                        'min': 0,
+                        chartArea: {left: 40, right: 20},
+                        titleTextStyle: {
+                            color: '#aaa',    // any HTML string color ('red', '#cc00cc')
+                            fontSize: '22', // 12, 18 whatever you want (don't specify px)
+                            bold: true,    // true or false
+                            italic: false   // true of false
+                        }
                       };
 
         // Instantiate and draw our chart, passing in some options.
@@ -347,8 +359,8 @@ $fetch_nutrition_feed_kglt2 <br>
         var data = google.visualization.arrayToDataTable([
            ['Element', 'GPD', { role: 'style' }],
            ['EM', <?=$agrifirm_em?>, 'silver'],            // RGB value
-           ['PM', <?=$agrifirm_pm?>, 'yellow'],
-           ['goal', <?=$agrifirm_goal?>, 'green' ], // CSS-style declaration
+           ['PM', <?=$agrifirm_pm?>, 'ffcc00'],
+           ['Goal', <?=$agrifirm_goal?>, 'green' ], // CSS-style declaration
         ]);
 
         // Set chart options
@@ -356,7 +368,15 @@ $fetch_nutrition_feed_kglt2 <br>
                        'legend': { position: 'none', maxLines: 3 },
                        'width':'100%',
                        'height':300,
-                       'max': 1000
+                        'max': 1000,
+                        'min': 0,
+                        chartArea: {left: 40, right: 20},
+                        titleTextStyle: {
+                            color: '#007f2d',    // any HTML string color ('red', '#cc00cc')
+                            fontSize: '22', // 12, 18 whatever you want (don't specify px)
+                            bold: true,    // true or false
+                            italic: false   // true of false
+                        }
                       };
 
         // Instantiate and draw our chart, passing in some options.
@@ -367,33 +387,40 @@ $fetch_nutrition_feed_kglt2 <br>
     </script>
   </head>
 
-<body>
+<body class="bg-light">
 
   <div class="container-fluid">
 
-    <div class="row justify-content-center">
-      <div class="col-12">
+    <div class="row justify-content-center my-5">
+      <div class="col-12 text-center">
+        <img src="img/agrifirm_logo.png" class="col-5" alt="">
+      </div>
+    </div>
+
+    <div class="row justify-content-center my-3">
+      <div class="col-11 bg-white rounded px-4">
         <p>
           <h2 class="mt-3"><?=$producer_title?></h2>
-          <strong>Fazenda:</strong> <?=$producer_farm?><br>
-          <strong>Cidade:</strong> <?=$producer_city?>/<?=$producer_state?><br>
-          <strong>Telefone:</strong> <?=$producer_phone?><br>
-          <strong>E-mail:</strong> <?=$producer_email?><br>
-          <strong>Técnico Fazenda:</strong> <?=$producer_farm_tec?><br>
-          <strong>Técnico Agrifirm:</strong> <?=$producer_agrifirm_tec?><br>
+          <hr style="margin:10px 0 10px 0;">
+          <strong class="texto-verde">Fazenda:</strong> <?=$producer_farm?><br>
+          <strong class="texto-verde">Cidade:</strong> <?=$producer_city?>/<?=$producer_state?><br>
+          <strong class="texto-verde">Telefone:</strong> <?=$producer_phone?><br>
+          <strong class="texto-verde">E-mail:</strong> <?=$producer_email?><br>
+          <strong class="texto-verde">Técnico Fazenda:</strong> <?=$producer_farm_tec?><br>
+          <strong class="texto-verde">Técnico Agrifirm:</strong> <?=$producer_agrifirm_tec?><br>
         </p>
       </div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h2>Produtor</h2>
-        <table>
-          <tr>
-            <th>Coluna 1</th>
-            <th>Kg/Lt</th>
-            <th>Kg/Lt2</th>
-            <th>R$/Kg/Lt</th>
+    <div class="row justify-content-center mt-5">
+      <div class="col-11">
+        <h2>:: Produtor</h2>
+        <table class="tabela border-none border-white">
+          <tr class="texto-verde bg-amarelo border-white">
+            <th class="border-white">Coluna 1</th>
+            <th class="border-white">Kg/Lt</th>
+            <th class="border-white">Kg/Lt2</th>
+            <th class="border-white">R$/Kg/Lt</th>
           </tr>
           <tr>
             <td><?=$fetch_producer_column1?></td>
@@ -431,14 +458,14 @@ $fetch_nutrition_feed_kglt2 <br>
 
 
     <div class="row justify-content-center mt-5">
-      <div class="col-12">
-        <h2>Nutrição Agrifirm</h2>
-        <table>
-          <tr>
-            <th>Dieta Atual</th>
-            <th>Kg/Lt</th>
-            <th></th>
-            <th>R$/Kg/Lt</th>
+      <div class="col-11">
+        <h2>:: Nutrição Agrifirm</h2>
+        <table class="tabela border-none border-white">
+          <tr class="texto-verde bg-amarelo border-white">
+            <th class="border-white">Dieta Atual</th>
+            <th class="border-white">Kg/Lt</th>
+            <th class="border-white"></th>
+            <th class="border-white">R$/Kg/Lt</th>
           </tr>
           <tr>
             <td><?=$fetch_nutrition_milk_diet?></td>
@@ -474,9 +501,21 @@ $fetch_nutrition_feed_kglt2 <br>
       </div>
     </div>
 
+    <div class="row justify-content-center mt-5">
+      <div class="col-11">
+        <h2>:: Gráficos</h2>
+      </div>
+    </div>
 
-    <div id="producer_chart"></div>
-    <div id="agrifirm_chart"></div>
+    <div class="row justify-content-center mt-0">
+      <div class="col-12">
+        <div id="producer_chart" class="rounded pt-4"></div>
+        <div id="agrifirm_chart" class="rounded"></div>
+      </div>
+    </div>
+
+
+
 
   </div>
 
